@@ -35,7 +35,7 @@ import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 // import LineHeight from 'ckeditor5-line-height/src/lineheight';
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+// import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -70,7 +70,7 @@ ClassicEditor.builtinPlugins = [
 	Font,
 	Highlight,
 	// LineHeight,
-	HorizontalLine,
+	// HorizontalLine,
 	SimpleUploadAdapter
 ];
 
@@ -98,7 +98,7 @@ ClassicEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'blockQuote',
-			'horizontalLine',
+			// 'horizontalLine',
 			'|',
 			'link',
 			'imageUpload',
