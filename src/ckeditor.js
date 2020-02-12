@@ -30,9 +30,12 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 // -- Custom --
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 // import LineHeight from 'ckeditor5-line-height/src/lineheight';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -62,9 +65,12 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	// -- Custom --
+	Underline,
 	Alignment,
 	Font,
+	Highlight,
 	// LineHeight,
+	HorizontalLine,
 	SimpleUploadAdapter
 ];
 
@@ -76,8 +82,11 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'underline',
+			'|',
 			'fontSize',
 			'fontColor',
+			'highlight',
 			// 'lineHeight',
 			'alignment',
 			// 'alignment:left',
@@ -89,6 +98,7 @@ ClassicEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'blockQuote',
+			'horizontalLine',
 			'|',
 			'link',
 			'imageUpload',
@@ -97,6 +107,28 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'undo',
 			'redo'
+		]
+	},
+	highlight: {
+		options: [
+			{
+				model: 'yellowMarker',
+				class: 'marker-yellow',
+				title: 'Yellow Marker',
+				color: 'var(--ck-highlight-marker-yellow)',
+				type: 'marker'
+			},
+			{
+				model: 'greenMarker',
+				class: 'marker-green',
+				title: 'Green marker',
+				color: 'var(--ck-highlight-marker-green)',
+				type: 'marker'
+			},
+			{ model: 'pinkMarker', class: 'marker-pink', title: 'Pink marker', color: 'var(--ck-highlight-marker-pink)', type: 'marker' },
+			{ model: 'blueMarker', class: 'marker-blue', title: 'Blue marker', color: 'var(--ck-highlight-marker-blue)', type: 'marker' },
+			{ model: 'redPen', class: 'pen-red', title: 'Red pen', color: 'var(--ck-highlight-pen-red)', type: 'pen' },
+			{ model: 'greenPen', class: 'pen-green', title: 'Green pen', color: 'var(--ck-highlight-pen-green)', type: 'pen' }
 		]
 	},
 	image: {
